@@ -1,8 +1,15 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
 /* general styles */
 body {
     margin: 0;
     background: #d9d9d9f9;
     transition: 0.3s linear all;
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
 }
 
 .container {
@@ -22,14 +29,12 @@ body {
 
 /* title */
 h1 {
-    font-family: 'Nunito medium';
     width: fit-content;
 }
 
 /* the box for typing */
 #text-area {
     position: relative;
-    font-family: 'Nunito bold';
     display: block;
     outline: none;
     resize: none;
@@ -147,7 +152,6 @@ h1 {
 /* shows the counted words */
 #counts,
 #counted-words {
-    font-family: 'Nunito bold';
     vertical-align: middle;
     font-size: 20px;
 }
