@@ -1,13 +1,20 @@
-// gets the input of the textArea and stores in a variable every 0.5s
+
 
 const textArea = document.getElementById('text-area')
 const colorTemplate = document.getElementById('color-template')
 const countedWords = document.getElementById('counts')
 const body = document.body
+// under the true condition sets the input of the text area to the cached data
+if (true) {
+    let theCachedInput = localStorage.getItem('input')
+    textArea.value = theCachedInput
+}
+// gets the input of the textArea and stores in a variable every 0.5s
 setInterval(() => {
     let words = textArea.value
     let wordsLength = words.length
     countedWords.innerHTML = `${wordsLength}`
+    localStorage.setItem('input', words)
 }, 500)
 
 // template changes
