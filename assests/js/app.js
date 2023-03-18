@@ -10,12 +10,14 @@ if (true) {
     textArea.value = theCachedInput
 }
 // gets the input of the textArea and stores in a variable every 0.5s
-setInterval(() => {
+textArea.addEventListener('keyup', validCheck)
+
+function validCheck() {
     let words = textArea.value
     let wordsLength = words.length
     countedWords.innerHTML = `${wordsLength}`
     localStorage.setItem('input', words)
-}, 500)
+}
 
 // template changes
 const colorsTemps = document.querySelectorAll('.colors')
